@@ -1,0 +1,44 @@
+.VacationCard.Box {
+	width: 180px;
+    height: 180px;
+    position: relative;
+    border: 1px solid green;
+    display: inline-flex;
+    text-align: left;
+    border-radius: 10px;
+    background-size: contain;
+    background: round;
+    padding: 30px 15px;
+    overflow-y: auto;
+    color: white;
+    text-shadow: 0 0 6px black;
+    font-weight: bold;
+}
+
+.VacationCard .buttonsContainer {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    top: 5px;
+    right: 2px;
+}
+
+.VacationCardLinkWrapper {
+    text-decoration: none;
+    color: inherit;
+}
+
+.VacationCard .followersCount {
+    position: absolute;
+    bottom: 5px;
+    right: 2px;
+    background-color: blueviolet;
+    border-radius: 100%;
+    width: 28px;
+    height: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}

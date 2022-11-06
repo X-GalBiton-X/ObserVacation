@@ -1,0 +1,23 @@
+.VacationList {
+    position: relative;
+}
+.VacationList .VacationListCards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+    min-height: 500px;
+}
+
+.VacationList .addVacationButton {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    color: gray;
+}
+
+.paginationContainer {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}

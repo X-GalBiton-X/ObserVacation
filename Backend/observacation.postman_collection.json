@@ -1,0 +1,278 @@
+{
+	"info": {
+		"_postman_id": "4112162b-6bb6-4227-9d0e-8f772795cddc",
+		"name": "observacation",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "22434186"
+	},
+	"item": [
+		{
+			"name": "Register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"firstName\": \"Gal\",\n    \"lastName\": \"Biton\",\n    \"username\": \"kofifim\",\n    \"password\": \"Biton123\",\n    \"role\": 1\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3001/api/auth/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"api",
+						"auth",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"kofifim\",\r\n    \"password\": \"Biton123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3001/api/auth/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"api",
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET all vacations",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3001/api/vacations",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"api",
+						"vacations"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET one vacation by id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3001/api/vacations/8",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"api",
+						"vacations",
+						"8"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST new vacation",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "destination",
+							"value": "AMSTERDAM",
+							"type": "default"
+						},
+						{
+							"key": "description",
+							"value": "Your life will never be the same!",
+							"type": "default"
+						},
+						{
+							"key": "image",
+							"type": "file",
+							"src": "/D:/user/Pictures/Feedback/{3D1EBC26-E02D-4279-B40C-C6982D81D072}/Capture001.png"
+						},
+						{
+							"key": "fromDate",
+							"value": "2022-11-02",
+							"type": "text"
+						},
+						{
+							"key": "untilDate",
+							"value": "2022-11-10",
+							"type": "text"
+						},
+						{
+							"key": "price",
+							"value": "999999",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:3001/api/vacations",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"api",
+						"vacations"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PUT existing vacation",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "destination",
+							"value": "Gal's Wonderland",
+							"type": "default"
+						},
+						{
+							"key": "description",
+							"value": "Your life will never be the same!",
+							"type": "default"
+						},
+						{
+							"key": "image",
+							"type": "file",
+							"src": "/D:/user/Downloads/p_aliceinwonderland_19875_ad409a49 (1).jpeg"
+						},
+						{
+							"key": "imageName",
+							"value": "26d5de51-088a-4ef7-8c9a-bde29175eb20.png",
+							"type": "text"
+						},
+						{
+							"key": "fromDate",
+							"value": "2022-11-02",
+							"type": "text"
+						},
+						{
+							"key": "untilDate",
+							"value": "2022-11-10",
+							"type": "text"
+						},
+						{
+							"key": "price",
+							"value": "1238",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:3001/api/vacations/5",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"api",
+						"vacations",
+						"5"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE existing vacation",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3001/api/vacations/8",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"api",
+						"vacations",
+						"8"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiZjRhOTE1YmItNzJiMy00N2Y5LWJhZjUtNTI3ZTUzODUwOGU0IiwiZmlyc3ROYW1lIjoiR2FsIiwibGFzdE5hbWUiOiJCaXRvbiIsInVzZXJuYW1lIjoia29maWZpbSIsInJvbGUiOjF9LCJpYXQiOjE2Njc0Njg1ODMsImV4cCI6MTY2NzQ3NTc4M30.1kVcLW540Ng3GVdOt1oTb42uzOlMGGNkCuge0rU4Ew8",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}
