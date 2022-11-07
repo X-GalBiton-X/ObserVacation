@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 05, 2022 at 11:20 AM
+-- Generation Time: Nov 07, 2022 at 08:36 AM
 -- Server version: 10.4.24-MariaDB
 -- PHP Version: 8.1.6
 
@@ -61,6 +61,36 @@ CREATE TABLE `followers` (
   `userId` binary(16) NOT NULL,
   `vacationId` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `followers`
+--
+
+INSERT INTO `followers` (`userId`, `vacationId`) VALUES
+(0x034fcfa5ebda410ab50f92d253abc6a1, 28),
+(0x0b8c37a656d844cc879021416eaf28d1, 14),
+(0x0b8c37a656d844cc879021416eaf28d1, 27),
+(0x0b8c37a656d844cc879021416eaf28d1, 28),
+(0x1f905fa111224caca45e3cb31d4fff7e, 14),
+(0x1f905fa111224caca45e3cb31d4fff7e, 24),
+(0x1f905fa111224caca45e3cb31d4fff7e, 25),
+(0x1f905fa111224caca45e3cb31d4fff7e, 27),
+(0x1f905fa111224caca45e3cb31d4fff7e, 28),
+(0x1f905fa111224caca45e3cb31d4fff7e, 29),
+(0x1f905fa111224caca45e3cb31d4fff7e, 31),
+(0x1f905fa111224caca45e3cb31d4fff7e, 32),
+(0x1f905fa111224caca45e3cb31d4fff7e, 33),
+(0x249ee6eaf31043c9b87167731db8e5e0, 28),
+(0x264afef1ddbb4d3bb3eb10e99ef496a7, 28),
+(0x3f05e79bbd47495d9d3a51f1e5229168, 28),
+(0x67862ba580724fa3b5d4ac4d8815332a, 28),
+(0x8c6c14b9ae134ded9d35d84e2523da8e, 28),
+(0x8c6c14b9ae134ded9d35d84e2523da8e, 31),
+(0x8c6c14b9ae134ded9d35d84e2523da8e, 33),
+(0x8e55c9f51de14b169cad32972bc30891, 14),
+(0x8e55c9f51de14b169cad32972bc30891, 24),
+(0x8e55c9f51de14b169cad32972bc30891, 28),
+(0x8e55c9f51de14b169cad32972bc30891, 32);
 
 -- --------------------------------------------------------
 
@@ -134,10 +164,17 @@ CREATE TABLE `vacations` (
 --
 
 INSERT INTO `vacations` (`vacationId`, `destination`, `description`, `imageName`, `fromDate`, `untilDate`, `price`) VALUES
-(1, 'Holland, Amsterdam', 'The beautiful capital of Holland!', 'f9761e9d-4d98-11ed-b5b7-f0def15bcf95.jpg', '2022-10-17', '2022-10-28', '1269.00'),
-(2, 'France, Paris', 'Great food and wonderful sights', 'f97631e5-4d98-11ed-b5b7-f0def15bcf95.jpg', '2022-10-20', '2022-10-25', '1100.00'),
-(3, 'England, London', 'The queen is always in our hearts..', 'f97633b7-4d98-11ed-b5b7-f0def15bcf95.jpg', '2022-10-18', '2022-10-31', '1158.00'),
-(4, 'Italy, Rome', 'The most romantic place on earth!!!', 'f976349a-4d98-11ed-b5b7-f0def15bcf95.jpg', '2022-11-03', '2022-11-07', '1520.00');
+(14, 'Amsterdam', 'Iconic canals, centuries-old townhomes, cobblestone lanes and flower-adorned bridges. Amsterdam is as pretty as a postcard with charm in spades. It\'s also one of the rare places that attracts history buffs, luxury-minded travelers, couples seeking romance and backpackers alike.  Besides its cultural attractions, such as the Anne Frank House and The Concertgebouw, the Dutch capital has leafy parks, hip shops and an enduring sense of the past that thankfully never fades.', 'c9d71065-9edc-4ec4-9ab3-205f60834a5f.jpg', '2022-11-09', '2022-11-14', '1430.00'),
+(24, 'Paris', 'The City of Lights dazzles in every way. Nowhere else on earth makes the heart swoon like the mention of Paris. The city lures with its magnificent art, architecture, culture, and cuisine, but there’s also a quieter magic waiting to be explored: the quaint cobbled lanes, the sweet patisseries around the corner, and the cozy little bistros that beckon with a glass of Beaujolais. Get ready to make Paris your own.', '88df820c-47ee-4856-95b7-0824e6e69e8a.jpg', '2022-11-19', '2022-11-22', '1700.00'),
+(25, 'Rome', 'With its unparalleled history, Rome is the third most visited city in Europe and the fourteenth worldwide. It attracts visitors from all over the world who are impatient to discover the city’s impressive monuments and archaeological sites; not to mention its renowned cuisine and its lively atmosphere.', 'fc9849f6-8a9d-40f6-a75a-ef87d19b0c64.jpg', '2022-12-09', '2022-12-15', '2000.00'),
+(26, 'Barcelona', 'Perfect beaches, world-famous tapas, and Gaudí—the Catalan capital is a Mediterranean dream', '911ffb36-4d69-4ba8-b31e-6b82935cf547.jpg', '2022-11-08', '2022-11-12', '1990.00'),
+(27, 'Jerusalem', 'This ancient city will charm you with its enchanting old town, limestone architecture, and some very friendly cats.', '15e363c6-9e3c-447e-b025-2aeb3daed8a4.jpg', '2022-11-26', '2022-11-30', '5999.99'),
+(28, 'Dimona', 'A city in Southern District, Israel. It has many popular attractions, including Negev Camel Ranch, Mamshit, making it well worth a visit.', 'f9f9abba-5932-4092-ae4d-5b1c8bb3b78c.jpg', '2022-12-12', '2022-12-16', '950.00'),
+(29, 'Rhodes', 'Take a trip back to ancient times as you explore beaches, palaces, and everything in-between on this island.', '57298bf0-2554-4478-b29f-616f41e9f70d.jpg', '2022-11-27', '2022-12-10', '3250.50'),
+(30, 'Belgium', 'Situated between France and The Netherlands, the Kingdom of Belgium is often called the Essence of Europe. Stunning architecture decorates quaint cobblestone squares.', '5f3afbfa-a2bf-49b7-9bd1-54e2a15ada95.jpg', '2022-11-11', '2022-12-12', '5555.00'),
+(31, 'Ayia Napa', 'Ayia Napa\'s magnificent long stretches of beach, with exotic turquoise waters and white sand, the various dining options ranging from traditional cuisine to international, the many luxury hotels, budget accommodation and of course its hidden beauty spots, makes it an ideal destination for families, couples and singles.', '957e4b13-c916-4bf1-a538-936f44479a84.jpg', '2022-11-14', '2022-11-19', '900.00'),
+(32, 'Las Vegas', 'Experience Sin City’s unique allure and grandeur, then let nearby landscapes take your breath away.', '5f793d06-1071-470f-bcee-b0df7bf98b58.jpg', '2022-12-03', '2022-12-08', '3898.57'),
+(33, 'New York', 'If you’re looking for a city that has it all, look no further than New York City. There’s something for everyone in this amazing metropolis – from world-renowned museums and theaters to trendy restaurants and nightlife.', '48ea2975-d873-4096-86de-08c7df3b9bfd.jpeg', '2022-11-15', '2022-11-25', '9999.99');
 
 --
 -- Indexes for dumped tables
@@ -183,7 +220,7 @@ ALTER TABLE `roles`
 -- AUTO_INCREMENT for table `vacations`
 --
 ALTER TABLE `vacations`
-  MODIFY `vacationId` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `vacationId` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=34;
 
 --
 -- Constraints for dumped tables
